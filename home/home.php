@@ -11,7 +11,7 @@
     <div class="container" style:width:80%>
         <div class="Carousel">
            <br>
-           <br>
+          
            
             <div class="slick-list" id="slick-list">
                 <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev"
@@ -224,6 +224,8 @@
             
 
         </section>
+
+        
 
     </div>
     <script defer src="./home/main.js"></script>

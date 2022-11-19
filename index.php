@@ -9,20 +9,20 @@
 <body style=heigth:auto>
 
 <?php
-			require_once('header/header.php');
+			require_once('Views/header.php');
 ?>
 
 
 
 <div style="width:100%;     position: absolute; top:80px; display:flex; justify-content:center">
 <?php
-			require_once('home/home.php');
+			require_once('Views/home/home.php');
 		?>
 </div>
 <div">
 		
         <?php
-			require_once('footer/footer.php');
+			require_once('Views/footer.php');
 		?>
 </div>
 </body>

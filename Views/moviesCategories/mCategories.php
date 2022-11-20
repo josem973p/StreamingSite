@@ -1,5 +1,3 @@
-
-
 <head>
 
     <link rel="stylesheet" href="Styles/homeStyles.css">
@@ -7,6 +5,12 @@
 </head>
 
 <body>
+
+<?php
+			require_once('../header/header.php');
+?>
+
+
 
     <div class="container" style:width:80%>
         <div class="Carousel">
@@ -228,5 +232,12 @@
         
 
     </div>
+
+    <div">
+		
+        <?php
+			require_once('../footer.php');
+		?>
+</div>
     <script defer src="Views/home/main.js"></script>
 </body>

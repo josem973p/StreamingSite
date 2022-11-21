@@ -1,3 +1,22 @@
+<?php
+require_once("php/loadInitialData.php");
+
+$totalMovies = $filmsByCategory[0];
+$actionMovies = $filmsByCategory[1];
+$cienceMovies = $filmsByCategory[2];
+$comedyMovies = $filmsByCategory[3];
+$documentaryMovies = $filmsByCategory[4];
+$dramaMovies = $filmsByCategory[5];
+$kidsMovies = $filmsByCategory[6];
+$romanceMovies = $filmsByCategory[7];
+
+
+
+
+//echo var_dump($actionMovies[0]-> RutaArchivo);
+
+?>
+
 <head>
 
 <meta charset="UTF-8">
@@ -42,10 +61,10 @@ a{
 .slick-list{
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: start;
     width: fit-content;
-    height: 200px;
-    padding: 10px 0px;
+    height: 250px;
+    padding: 0px 0px;
     margin: 0px auto;
     max-width: 90vw;
     overflow: scroll;
@@ -60,29 +79,18 @@ a{
 }
 .slick{
     position: relative;
-    width: 190px;
+    width: 220px;
     padding: 0 0px;
     float: left;
     box-sizing: border-box;
     display: flex;
     height: 100%;
 }
-.slick h4{
-    position: absolute;
-    z-index: 1;
-    font-size: 22px;
-    line-height: 23px;
-    color: #fff;
-    padding: 15px;
-}
-.slick h4 small{
-    font-size: 15px;
-    display: block;
-}
+
 .slick a img{
     object-fit: cover;
     height: 200px;
-    width: 90%;
+    width: 100%;
     border-radius: 4px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
     transition: .3s ease-in-out;
@@ -146,7 +154,7 @@ a{
 
  
 
-    <div class="categoryContainer" style="background-color:#03091e;">
+    <div class="categoryContainer" >
 
     <div class="container">
         <div class="Carousel">
@@ -156,159 +164,25 @@ a{
             <div class="slick-list" id="slick-list">
                
                 <div class="slick-track" id="track">
+
+                <?php for($x = 0; $x < sizeof($actionMovies); $x++): ?>
+
                     <div class="slick">
                         <div>
                             <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
+                         
                                 <figure>
-                                    <img src="Assets/homeAssets/images/1.jpg" alt="Image">
-                                    <figcaption>
-                                        hola es una prueba de figcaption 1233eeewfewf
-                                    </figcaption>
+                                 <!--   <img src="Assets/homeAssets/images/3.jpg" alt="Image">  -->
+                                   <img src="portadas/<?php echo $actionMovies[$x]-> RutaArchivo ?>" alt="Image"> 
                                 </figure>
+                                <fig-caption><?php echo $actionMovies[$x]-> NombrePelicula ?></fig-caption>
                             </a>
                         </div>
                     </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/2.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/3.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/4.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/5.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/6.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/7.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/8.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/9.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/10.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/11.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/12.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/13.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/14.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/15.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
+
+
+                <?php endfor; ?>
+                    
                 </div>
                 
             </div>
@@ -328,156 +202,24 @@ a{
             <div class="slick-list" id="slick-list">
                 
                 <div class="slick-track" id="track">
+                    <?php for($x = 0; $x < sizeof($cienceMovies); $x++): ?>
+
                     <div class="slick">
                         <div>
                             <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/1.jpg" alt="Image">
-                                </picture>
+                         
+                                <figure>
+                                <!--   <img src="Assets/homeAssets/images/3.jpg" alt="Image">  -->
+                                <img src="portadas/<?php echo $cienceMovies[$x]-> RutaArchivo ?>" alt="Image"> 
+                                </figure>
+                                <fig-caption><?php echo $cienceMovies[$x]-> NombrePelicula ?></fig-caption>
                             </a>
                         </div>
                     </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/2.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/3.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/4.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/5.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/6.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/7.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/8.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/9.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/10.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/11.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/12.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/13.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/14.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/15.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
+
+
+                    <?php endfor; ?>
+                    
                 </div>
                
             </div>
@@ -496,156 +238,26 @@ a{
             <div class="slick-list" id="slick-list">
                
                 <div class="slick-track" id="track">
+
+                <?php for($x = 0; $x < sizeof($comedyMovies); $x++): ?>
+
                     <div class="slick">
                         <div>
                             <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/1.jpg" alt="Image">
-                                </picture>
+                           
+                                <figure>
+                                <!--   <img src="Assets/homeAssets/images/3.jpg" alt="Image">  -->
+                                <img src="portadas/<?php echo $comedyMovies[$x]-> RutaArchivo ?>" alt="Image"> 
+                                </figure>
+                                <fig-caption><?php echo $comedyMovies[$x]-> NombrePelicula ?></fig-caption>
                             </a>
                         </div>
                     </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/2.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/3.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/4.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/5.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/6.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/7.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/8.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/9.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/10.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/11.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/12.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/13.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/14.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/15.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
+
+
+                <?php endfor; ?>
+
+                         
                 </div>
                 
             </div>
@@ -664,165 +276,33 @@ a{
             <div class="slick-list" id="slick-list">
                
                 <div class="slick-track" id="track">
+
+                <?php for($x = 0; $x < sizeof($documentaryMovies); $x++): ?>
+
                     <div class="slick">
                         <div>
                             <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/1.jpg" alt="Image">
-                                </picture>
+                              
+                                <figure>
+                                <!--   <img src="Assets/homeAssets/images/3.jpg" alt="Image">  -->
+                                <img src="portadas/<?php echo $documentaryMovies[$x]-> RutaArchivo ?>" alt="Image"> 
+                                </figure>
+                                <fig-caption><?php echo $documentaryMovies[$x]-> NombrePelicula ?></fig-caption>
                             </a>
                         </div>
                     </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/2.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/3.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/4.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/5.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/6.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/7.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/8.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/9.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/10.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/11.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/12.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/13.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/14.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/15.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
+
+
+                <?php endfor; ?>
+
+                   
                 </div>
                
             </div>
 
         </div>
 
-    
-
-        
+   
 
     </div>
     <div class="container" style:width:80%>
@@ -833,156 +313,105 @@ a{
             <div class="slick-list" id="slick-list">
                
                 <div class="slick-track" id="track">
+
+                <?php for($x = 0; $x < sizeof($dramaMovies); $x++): ?>
+
                     <div class="slick">
                         <div>
                             <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/1.jpg" alt="Image">
-                                </picture>
+                              
+                                <figure>
+                                <!--   <img src="Assets/homeAssets/images/3.jpg" alt="Image">  -->
+                                <img src="portadas/<?php echo $dramaMovies[$x]-> RutaArchivo ?>" alt="Image"> 
+                                </figure>
+                                <fig-caption><?php echo $dramaMovies[$x]-> NombrePelicula ?></fig-caption>
                             </a>
                         </div>
                     </div>
+
+
+                <?php endfor; ?>
+                  
+                </div>
+              
+            </div>
+
+        </div>
+
+       
+        </div>
+    
+
+    
+
+    <div class="container" style:width:80%>
+        <div class="Carousel">
+            <h2>INFANTIL</h2>
+          
+           
+            <div class="slick-list" id="slick-list">
+               
+                <div class="slick-track" id="track">
+
+                <?php for($x = 0; $x < sizeof($kidsMovies); $x++): ?>
+
                     <div class="slick">
                         <div>
                             <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/2.jpg" alt="Image">
-                                </picture>
+                               
+                                <figure>
+                                <!--   <img src="Assets/homeAssets/images/3.jpg" alt="Image">  -->
+                                <img src="portadas/<?php echo $kidsMovies[$x]-> RutaArchivo ?>" alt="Image"> 
+                                </figure>
+                                <fig-caption><?php echo $kidsMovies[$x]-> NombrePelicula ?></fig-caption>
                             </a>
                         </div>
                     </div>
+
+
+                <?php endfor; ?>
+                  
+                </div>
+              
+            </div>
+
+        </div>
+
+
+        </div>
+    
+     
+
+  
+
+    <div class="container" style:width:80%>
+        <div class="Carousel">
+            <h2>ROMANCE</h2>
+          
+           
+            <div class="slick-list" id="slick-list">
+               
+                <div class="slick-track" id="track">
+
+                <?php for($x = 0; $x < sizeof($romanceMovies); $x++): ?>
+
                     <div class="slick">
                         <div>
                             <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/3.jpg" alt="Image">
-                                </picture>
+                            
+                                <figure>
+                                <!--   <img src="Assets/homeAssets/images/3.jpg" alt="Image">  -->
+                                <img src="portadas/<?php echo $romanceMovies[$x]-> RutaArchivo ?>" alt="Image"> 
+                            
+                                </figure>
+                                <fig-caption><?php echo $romanceMovies[$x]-> NombrePelicula ?></fig-caption>
                             </a>
                         </div>
                     </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/4.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/5.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/6.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/7.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/8.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/9.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/10.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/11.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/12.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/13.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/14.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="slick">
-                        <div>
-                            <a href="/">
-                                <h4><small>Share Your Message</small>Watch</h4>
-                                <picture>
-                                    <img src="Assets/homeAssets/images/15.jpg" alt="Image">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
+
+
+                <?php endfor; ?>
+                  
                 </div>
               
             </div>
@@ -1001,6 +430,7 @@ a{
     </div>
 
 
+
     </div>
 
  
@@ -1008,6 +438,9 @@ a{
 
 
 </section>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>

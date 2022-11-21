@@ -1,3 +1,19 @@
+<?php
+
+require_once('php/loadInitialData.php');
+ 
+
+ 
+
+$result=array();
+
+    $result = LoadData::getMoviesData();
+
+    //echo var_dump($result);
+  
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
